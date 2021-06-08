@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Sharingshortcuts">
-        <activity android:name=".SendMessageActivity" android:theme="@style/Base.Theme.AppCompat.Light.Dialog">
+        <activity android:name=".SendMessageActivity" android:theme="@style/Theme.MyDialog">
 
             <!-- This activity can respond to intents with an action SEND and a content type text/plain -->
             <intent-filter>
@@ -17,7 +17,7 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
 
-                <data android:mimeType="text/plain" />
+                <data android:mimeType="text/*" />
             </intent-filter> <!-- Needed if you import the sharetarget androidx library. It allows for this activity to be taken into account as a chooser target provider -->
             <meta-data
                 android:name="android.service.chooser.chooser_target_service"
